@@ -123,6 +123,7 @@ export class AccountEntity {
             accountInterface.homeAccountId,
             accountInterface.environment || "",
             homeTenantId || accountInterface.tenantId || "",
+            accountInterface.idTokenClaims?.aud || "",
         ];
 
         return accountKey.join(Separators.CACHE_KEY_SEPARATOR).toLowerCase();
